@@ -7,6 +7,7 @@ import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import Image from "next/image";
 
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("react-lottie"), {ssr: false,}); // Ensure it only runs in the browser
@@ -82,18 +83,22 @@ export const BentoGridItem = ({
         <div className={`${id===6 && 'flex justify-center'} h-full`}>
             <div className="absolute w-full h-full">
                 { img && (
-                    <img 
+                    <Image 
                         src={img}
                         alt={img}
+                        width={500}
+                        height={500}
                         className={cn(imgClassName, 'object-center object-cover')}
                     />
                 )}
             </div>
             <div className={`absolute right-0 -bottom-5 ${id===5 && 'w-full opacity-80'}`}>
                 {spareImg &&(
-                    <img 
+                    <Image 
                     src={spareImg}
                     alt={spareImg}
+                    width={500}
+                    height={500}
                     className="object-center object-cover w-full h-full"
                 />
                 )}

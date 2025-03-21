@@ -1,5 +1,5 @@
 'use client';
-import React from "react";
+
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Spotlight } from "./ui/Spotlight";
 import MagicButton from "./ui/MagicButton";
@@ -7,7 +7,7 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <section id="hero" className="pb-20 pt-36 md:h-dvh scroll-mt-20 md:scroll-mt-24">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -46,7 +46,7 @@ const Hero = () => {
             </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

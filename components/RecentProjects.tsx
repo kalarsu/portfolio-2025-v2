@@ -2,6 +2,8 @@ import { projects } from '@/data'
 import React from 'react'
 import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from 'react-icons/fa';
+import Image from 'next/legacy/image';
+
 
 const RecentProjects = () => {
   return (
@@ -10,21 +12,25 @@ const RecentProjects = () => {
             A small selection of<br />
             <span className='text-purple-300'>recent projects</span>
         </h1>
-        <div className='flex flex-wrap gap-x-24 gap-y-8 mt-10 items-center justify-center p-4'>
+        <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10'>
             {projects.map(({id, title, des, img, iconLists, link})=>(
-                <div key={id} className='flex items-center justify-center p-4 gap-16 mt-10
-                lg:min-h-[32.5rem] sm:h-[41rem] h-[32rem]'>
+                <div key={id} className='flex items-center justify-center lg:min-h-[32.5rem] h-[25rem] sm:w-96 w-[80vw]'>
                     <PinContainer title={link} href={link}>
                         <div className='relative flex items-center justify-center
-                        sm:w-96 w-[80vw] overflow-hidden sm:h-[35vh] h-[30vh] lg:h-[30vh] mb-10'>
+                        sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10'>
                             <div className='relative w-full h-full overflow-hidden lg:rounded-3xl
                             bg-[#13162d]'>
-                                <img src="/bg.png" alt="bg-img" />
+                                <Image 
+                                    src="/bg.png" 
+                                    alt="bg-img"
+                                    layout='fill'
+                                   className='w-auto h-auto' />
                             </div>
-                            <img 
+                            <Image 
                                 src={img}
                                 alt={title}
-                                className='z-10 absolute bottom-0'
+                                layout='fill'
+                                className='z-10 absolute bottom-0 w-auto h-auto'
                             />
                         </div>
                         <h1 className='font-bold lg:text-2xl md:text-xl text-base line-clamp-1'>{title}</h1>
@@ -39,9 +45,11 @@ const RecentProjects = () => {
                                     justify-center items-cente flex'
                                     style={{ transform: `translateX(-${5 * index * 2}px)` }}
                                     >
-                                        <img className='lg:p-2 p-1'
+                                        <Image className='lg:p-2 p-1'
                                             src={icon}
                                             alt={icon}
+                                            width={50}
+                                            height={50}
                                         />
                                     </div>
                                 ))}
