@@ -2,7 +2,7 @@ import React from 'react'
 import footerImg from "@/public/footer-grid.svg";
 import Image from 'next/image';
 import MagicButton from './ui/MagicButton';
-import { FaLocationArrow } from 'react-icons/fa';
+import { FaLocationArrow, FaFileDownload } from 'react-icons/fa';
 import { socialMedia } from '@/data';
 import Link from 'next/link';
 
@@ -31,6 +31,13 @@ const Footer = () => {
                     position='right'
                 />
             </a>
+            <Link href="/Chi_Su_Resume.pdf" target="_blank">
+                <MagicButton 
+                    title="My Resume"
+                    icon={<FaFileDownload />}
+                    position='right'
+                />
+            </Link>
         </div>
         <div className='flex mt-16 md:flex-row flex-col justify-between items-center'>
             <p className='md:text-base text-sm md:font-normal font-light'>Copyright © {new Date().getFullYear()} Chi</p>
