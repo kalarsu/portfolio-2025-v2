@@ -1,13 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000319;
+  --background: #18032d;
   --foreground: #ededed;
 }
 
 html {
   /* scroll-behavior: smooth; */
   scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #18032d;
+    --foreground: #ededed;
+  }
+}
+
+@theme{
+  --color-balck: :default;
+  --color-black-100: #18032d;
 }
 
 @theme inline {
@@ -22,24 +40,6 @@ html {
       transform: translate(calc(-50% - 0.5rem));
     }
   }
-}
-
-@theme{
-  --color-balck: :default;
-  --color-black-100: #000319;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000319;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes spotlight {
@@ -135,10 +135,3 @@ body {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
-
-/* #hero::before {
-  content: "";
-  display: block;
-  height: 80px;
-  margin-top: -80px;
-} */

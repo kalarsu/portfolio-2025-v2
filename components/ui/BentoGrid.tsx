@@ -71,13 +71,13 @@ export const BentoGridItem = ({
       className={cn(
         "z-10 row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1]",
         "group/bento hover:shadow-xl transition duration-200 shadow-input",
-        "flex flex-col justify-between space-y-4 dark:border-white/[0.2]",
+        "flex flex-col justify-between space-y-4 dark:border-white/[0.2] ",
         className
       )}
       style={{
         backgroundColor: "rgb(4,7,29)",
         background:
-          "linear-gradient(90deg, rgba(4, 7, 29, 1) 0%, rgb(33 13 42) 100%)",
+          "linear-gradient(90deg, rgba(27, 5, 38) 0%, rgb(49 10 66) 100%)",
       }}
     >
         <div className={`${id===6 && 'flex justify-center'} h-full`}>
@@ -122,16 +122,16 @@ export const BentoGridItem = ({
                 { id===3 && (
                   <div className="flex absolute gap-1 lg:gap-5 w-fit -right-3 lg:-right-2">
                       <div className="flex flex-col gap-3 lg:gap-5">
-                        {['React.js', 'Next.js', 'TypeScript'].map((items)=>(
-                            <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E] opacity-50 lg:opacity-100 text-[#c1c2d3] text-xs lg:text-base"
+                        {['React.js', 'Next.js', 'TypeScript', 'GitHub'].map((items)=>(
+                            <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E] opacity-50 lg:opacity-100 text-gray-500 text-xs lg:text-base"
                             key={items}>{items}</span>
                         ))}
-                        <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E]"></span>
+                        {/* <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E]  text-gray-500">GitHub</span> */}
                       </div>
                       <div className="flex flex-col gap-3 lg:gap-5">
-                      <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E]"></span>
-                        {['TailwindCSS', 'Node.js', 'Motion'].map((items)=>(
-                            <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E] opacity-50 lg:opacity-100 text-[#c1c2d3] text-xs lg:text-base"
+                      {/* <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E] text-gray-500">Photoshop</span> */}
+                        {['TailwindCSS', 'Node.js', 'Motion', 'Photoshop'].map((items)=>(
+                            <span className="rounded-lg text-center py-2 lg:py-4 lg:px-3 bg-[#10132E] opacity-50 lg:opacity-100 text-gray-500 text-xs lg:text-base"
                             key={items}>{items}</span>
                         ))}
                       </div>
