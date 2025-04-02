@@ -8,27 +8,40 @@ import {
   useTransform,
 } from "motion/react";
 import { useRef } from "react";
+import type {
+  ComponentPropsWithoutRef,
+  ElementType,
+  ReactNode,
+} from "react";
 import { cn } from "@/lib/utils";
 
-export function Button({
-  borderRadius = "1.75rem",
-  children,
-  as: Component = "button",
-  containerClassName,
-  borderClassName,
-  duration,
-  className,
-  ...otherProps
-}: {
+// ✅ Define generic Button props
+type ButtonProps<C extends ElementType = "button"> = {
+  as?: C;
   borderRadius?: string;
-  children: React.ReactNode;
-  as?: any;
+  children: ReactNode;
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
-  [key: string]: unknown;
-}) {
+} & ComponentPropsWithoutRef<C>;
+
+// ✅ Fixed Button component
+export function Button<C extends ElementType = "button">(props: ButtonProps<C>) {
+  const {
+    as,
+    borderRadius = "1.75rem",
+    children,
+    containerClassName,
+    borderClassName,
+    duration,
+    className,
+    ...otherProps
+  } = props;
+
+  // ✅ Set default component safely here
+  const Component = as ?? ("button" as C);
+
   return (
     <Component
       className={cn(
@@ -36,7 +49,7 @@ export function Button({
         containerClassName,
       )}
       style={{
-        borderRadius: borderRadius,
+        borderRadius,
       }}
       {...otherProps}
     >
@@ -69,6 +82,7 @@ export function Button({
   );
 }
 
+// ✅ MovingBorder helper stays the same
 export const MovingBorder = ({
   children,
   duration = 3000,
