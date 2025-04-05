@@ -6,18 +6,9 @@ export const navItems = [
 ];
 
 export const gridItems = [
-  // {
-  //   id: 1,
-  //   title: "I prioritize client collaboration, fostering open communication ",
-  //   description: "",
-  //   className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-  //   imgClassName: "w-full h-full",
-  //   titleClassName: "justify-end",
-  //   img: "/b1.svg",
-  //   spareImg: "",
-  // },
   {
     id: 5,
+    type: "present",
     title: "Currently crafting dynamic web experiences using Next.js, React, and TypeScript",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
@@ -28,6 +19,7 @@ export const gridItems = [
   },
   {
     id: 4,
+    type: "personality",
     title: "Tech enthusiast with a passion for development.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
@@ -38,6 +30,7 @@ export const gridItems = [
   },
   {
     id: 2,
+    type: "time",
     title: "Flexible with time zone communications",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
@@ -48,6 +41,7 @@ export const gridItems = [
   },
   {
     id: 3,
+    type: "tech",
     title: "I treat every line of code as a step toward something magical.",
     description: "My tech stack is always growing",
     className: "md:col-span-3 md:row-span-2",
@@ -57,7 +51,8 @@ export const gridItems = [
     spareImg: "",
   },
   {
-    id: 6,
+    id: "6",
+    type: "connect",
     title: "Let's connect — I'm open to new opportunities and conversations.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
@@ -71,19 +66,19 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "AI-Powered Interview Practice & Feedback",
+    des: "AI interview platform powered by Vapi and Google Gemini for smart feedback.",
+    img: "/project1.png",
+    iconLists: ["/tech/re.svg", "/tech/tail.svg", "/tech/ts.svg", "/tech/next.svg"],
+    link: "https://devcrackai.vercel.app/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Children’s Book Website Animated with GSAP",
+    des: "Self-published children’s book site, dynamically animated with GSAP.",
+    img: "/project2.png",
+    iconLists: ["/tech/re.svg", "/tech/tail.svg", "/tech/gsap.svg"],
+    link: "https://three-little-chicks.vercel.app/",
   },
   // {
   //   id: 3,
@@ -173,7 +168,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer - Side Projects",
-    desc: "Developed a modern web application using Next.js, React and TypeScript, leveraging server-side rendering and static site generation to boost SEO and performance. Collaborated with design stakeholders via Figma to build reusable, scalable React components and integrate RESTful APIs for a responsive, accessible interface. Applied best practices in accessibility, performance, and SEO, and maintained high code quality with robust Git version control and thorough testing.",
+    desc: "Designed and developed an AI-powered interview preparation platform using Next.js, React, TypeScript, and Tailwind CSS, leveraging server-side rendering and static site generation to boost SEO and performance. Collaborated with design stakeholders via Figma to build reusable, scalable components and integrated RESTful APIs for a responsive, accessible user interface. Integrated Vapi for voice-based AI interaction, Firebase for storing user-defined data, and Vercel AI SDK with Google Gemini to dynamically generate and evaluate interview questions and answers. Applied best practices in accessibility, performance, and SEO, while ensuring high code quality through robust Git version control, ESLint, Prettier, and thorough testing.",
     className: "md:col-span-2",
     period: "2024 - present",
     thumbnail: "/exp1.svg",
@@ -215,4 +210,10 @@ export const socialMedia = [
     img: "/link.svg",
     url: "https://www.linkedin.com/in/chi-su-profile/",
   },
+];
+
+export const aboutMeImages = [
+  "/me/1.jpg",
+  "/me/2.jpg",
+  "/me/3.jpg"
 ];

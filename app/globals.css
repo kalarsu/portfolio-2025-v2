@@ -135,3 +135,50 @@ body {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
+/*----------Custom CSS-----------*/
+section{
+  justify-content: center;
+  align-items: center;
+}
+
+.section-container{
+  max-width: var(--container-7xl);
+  width: 100%;
+  z-index: 999;
+}
+
+.about-column{
+  &:nth-of-type(1){
+    top: -90%;
+  }
+  &:nth-of-type(2){
+    top: -45%;
+  }
+  &:nth-of-type(3){
+    top: -25%;
+  }
+  &:nth-of-type(4){
+    top: -60%;
+  }
+  &:nth-of-type(5){
+    top: -20%;
+  }
+
+  .img-container{
+    height: 33%;
+    width: 100%;
+    position: relative;
+    border-radius: 1vw;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+      box-sizing: border-box;
+    }
+  }
+}
+

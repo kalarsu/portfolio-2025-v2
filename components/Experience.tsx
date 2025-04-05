@@ -5,7 +5,8 @@ import { workExperience } from '@/data'
 
 const Experience = () => {
   return (
-   <section id="experiences" className="py-20">
+   <section id="experiences" className="py-20 flex sm:px-10 px-5">
+       <div className="section-container">
          <h1 className="heading">
            My 
            <span className="text-purple-300"> work experiences</span>
@@ -42,6 +43,7 @@ const Experience = () => {
                ))}
                
          </div>
+       </div>
        </section>
   )
 }

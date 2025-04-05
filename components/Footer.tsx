@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer id="contact" className='w-full pt-20 pb-20'>
+    <footer id="contact" className='w-full pt-20 pb-20 sm:px-10 px-5'>
         <div className='w-full absolute left-0 -bottom-72 min-h-96'>
             <Image
                 src={footerImg}

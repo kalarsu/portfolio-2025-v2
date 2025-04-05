@@ -33,6 +33,7 @@ export const BentoGrid = ({
 
 export const BentoGridItem = ({
   id,
+  type,
   className,
   title,
   description,
@@ -42,6 +43,7 @@ export const BentoGridItem = ({
   spareImg,
 }: {
   id?: number;
+  type?: string;
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
@@ -103,7 +105,7 @@ export const BentoGridItem = ({
                 />
                 )}
             </div>
-            {id===6 && (
+            {type==="connect" && (
                 <BackgroundGradientAnimation>
                     {/* <div
                         className ="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"
@@ -118,8 +120,8 @@ export const BentoGridItem = ({
                 <div className="font-sans px-4 font-bold text-lg lg:text-3xl text-[#c1c2d3] max-x-96 z-10">
                     {title}
                 </div>
-                { id===2 && <GlobeDemo />}
-                { id===3 && (
+                { type === "time" && <GlobeDemo />}
+                { type === "tech" && (
                   <div className="flex absolute gap-1 lg:gap-5 w-fit -right-3 lg:-right-2">
                       <div className="flex flex-col gap-3 lg:gap-5">
                         {['React.js', 'Next.js', 'TypeScript', 'GitHub'].map((items)=>(
@@ -137,7 +139,7 @@ export const BentoGridItem = ({
                       </div>
                   </div>
                 )}
-                {id===6 && (
+                {type==="connect" && (
                   <div className="mt-5 relative">
                     <div className="absolute -bottom-5 right-0">
                       <Lottie options={defaultOptions} height={200} width={400} />
